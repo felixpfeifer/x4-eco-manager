@@ -17,8 +17,6 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ main ]
-  schedule:
-    - cron: '25 0 * * 3'
 
 jobs:
   analyze:
@@ -32,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [  ]
+        language: [ 'cpp', 'csharp' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://git.io/codeql-language-support
 
